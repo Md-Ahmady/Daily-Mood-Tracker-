@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Daily Mood Tracker</h1>
+    <p id="current-date"></p>
+  </header>
+
+  <section class="mood-selector">
+    <h2>How are you feeling today?</h2>
+    <div class="emoji-buttons">
+      <button data-mood="happy">😊</button>
+      <button data-mood="sad">😢</button>
+      <button data-mood="angry">😠</button>
+      <button data-mood="anxious">😰</button>
+      <button data-mood="calm">😌</button>
+      <button data-mood="excited">🤩</button>
+    </div>
+
+    <div class="note-section">
+      <textarea id="mood-note" placeholder="Add a note about your mood..."></textarea>
+      <p id="note-display">No note added for today.</p>
+    </div>
+  </section>
+
+  <section class="mood-history">
+    <h2>Your Mood History</h2>
+
+    <div class="calendar-navigation">
+      <button id="prev-month">&lt; Prev</button>
+      <span id="month-year"></span>
+      <button id="next-month">Next &gt;</button>
+    </div>
+
+    <div id="calendar-view">
+      <!-- Mood calendar will be generated here -->
+    </div>
+  </section>
+
+  <section class="mood-summary">
+    <h2>Mood Summary</h2>
+    <div id="most-common-mood">
+      <h3>Most Common Mood: <span id="common-mood-name">-</span></h3>
+    </div>
+    <canvas id="moodChart" width="400" height="200"></canvas>
+    <div id="average-mood">
+      <h3>Average Mood Score: <span id="average-score">-</span></h3>
+    </div>
+    <div id="total-moods">
+      <h3>Total Moods Recorded: <span id="mood-count">-</span></h3>
+    </div>
+    <div id="best-streak">
+      <h3>Best Mood Streak: <span id="streak-count">-</span> days</h3>
+    </div>
+    <div id="positive-day">
+      <h3>Most Positive Day: <span id="positive-day-date">-</span></h3>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

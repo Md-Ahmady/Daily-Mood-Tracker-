@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #a5257f;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #340164;
+}
+
+h2 {
+  color: blueviolet;
+}
+
+#current-date {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Mood Selector */
+.mood-selector {
+  background: #83d6dab7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(251, 254, 255);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.emoji-buttons button {
+  font-size: 2rem;
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #eaf2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-buttons button:hover {
+  transform: scale(1.2);
+  background-color: #2a68cb;
+}
+
+/* Note Section */
+.note-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#mood-note {
+  width: 90%;
+  height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+#note-display {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Mood History */
+.mood-history {
+  background: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(237, 246, 255);
+  margin-bottom: 30px;
+}
+
+.calendar-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.calendar-navigation button {
+  background-color: #5f4b8b;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.calendar-navigation button:hover {
+  background-color: #7d63b1;
+}
+
+#month-year {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  min-width: 150px;
+  text-align: center;
+}
+
+#calendar-view {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#calendar-view div {
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: default;
+  user-select: none;
+}
+
+/* Weekday headers */
+.weekday {
+  font-weight: 700;
+  color: #ddd;
+  background-color: #340164;
+  cursor: default;
+}
+
+/* Differentiate days out of current month */
+.outside-month {
+  background-color: #444;
+  color: #999;
+}
+
+/* Mood colors */
+.mood-happy { background-color: #FFD700; }
+.mood-sad { background-color: #87CEEB; }
+.mood-angry { background-color: #FF6347; }
+.mood-anxious { background-color: #9370DB; }
+.mood-calm { background-color: #90EE90; }
+.mood-excited { background-color: #FFA500; }
+
+/* Mood Summary */
+.mood-summary {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mood-summary h2 {
+  font-size: 2rem;
+  color: #5f4b8b;
+  margin-bottom: 20px;
+}
+
+.mood-summary h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+#moodChart {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+#most-common-mood,
+#average-mood,
+#total-moods,
+#best-streak,
+#positive-day {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #2a68cb;
+}
